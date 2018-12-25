@@ -1,6 +1,27 @@
 //入口js 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Button} from 'antd-mobile'
+import {HashRouter,Route,Switch} from 'react-router-dom'//引入路由
+import Register from './containers/register/register'
+import Login from './containers/login/login'
+import Main from './containers/main/main'
 
-ReactDOM.render(<Button type="primary">Test</Button>,document.getElementById("root"));
+//引入redux
+import {Provider} from 'react-redux'
+import store from './redux/store'
+
+//引入全局样式
+import './assets/css/index.less'
+
+ReactDOM.render((
+    <Provider store={store}>{/*引入redux中的store*/}
+        <HashRouter>
+            <Switch>{/*  当显示的组件不是同时显示时，需要用到switch。（切换）  */}
+                <Route path='/register' component={Register}></Route>
+                <Route path='/login' component={Login}></Route>
+                <Route component={Main}></Route> {/*默认组件*/}
+            </Switch>
+        </HashRouter>
+    </Provider>
+    
+),document.getElementById("root"));
