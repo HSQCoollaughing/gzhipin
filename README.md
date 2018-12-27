@@ -69,3 +69,6 @@
 ## npm install --save prop-types   实现子组件向父组件传值（函数调用）  header-selector组件向laoban-info组件传值
 
 ## 改写了reducers.js中的成功路由。在utils中的index.js中，写了一个getRedirectTo方法去判断登录或注册成功最终要跳转的路由
+
+# 2018-12-27
+## 老板、大神信息保存成功后的路由跳转
