@@ -51,7 +51,7 @@ class Register extends Component {
 
     render () {
         const {type}=this.state
-        const {msg,redirectTo}=this.props.user//这里是2
+        const {msg,redirectTo}=this.props.user//这里是1、
 
         if(redirectTo){
             return <Redirect to={redirectTo} />

@@ -15,7 +15,7 @@ import './assets/css/index.less'
 
 ReactDOM.render((
     <Provider store={store}>{/*引入redux中的store*/}
-        <HashRouter>
+        <HashRouter>{/*路由器：只需要在这里引入一次就够了。  路由中的路由不需要引入*/}
             <Switch>{/*  当显示的组件不是同时显示时，需要用到switch。（切换）  */}
                 <Route path='/register' component={Register}></Route>
                 <Route path='/login' component={Login}></Route>

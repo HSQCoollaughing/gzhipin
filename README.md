@@ -53,6 +53,19 @@
 ## 请求跨域问题解决，解决方式：配置代理
 * 配置ajax请求的代理：package.json
 * "proxy":"http://localhost:4000"  (请求时请求的是 http://localhost:3000(也就是跟当前网站运行的域名端口不变，所以也就自然不会跨域)    配置了此项代理之后，代理会帮我们转发到http://localhost:4000)
+## 注册页面完成（包括ajax请求，页面错误提示，页面跳转），下面写登录页面
+* 登录页面基本跟注册页面一致
+### 首先，需要把登录页面包装成容器组件
+* import {connect} from "react-redux";
+* export default connect(mapStateToProps,mapDispatchToProps)(Login);
 
+## 新建dashen-info、laoban-info组件，作为main组件的子组件
 
+## 新建header-selector 作为dashen-info、laoban-info的子组件
 
+# 2018-12-26
+## 写好了header-selector组件
+
+## npm install --save prop-types   实现子组件向父组件传值（函数调用）  header-selector组件向laoban-info组件传值
+
+## 改写了reducers.js中的成功路由。在utils中的index.js中，写了一个getRedirectTo方法去判断登录或注册成功最终要跳转的路由
